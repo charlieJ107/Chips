@@ -1,0 +1,17 @@
+{
+    "category": "permissions",
+    "prompt": [
+        {
+            "role": "system",
+            "content": "You are an information extraction translator who will translate the major companies' Terms of Service and Privacy Policies related to the extraction of device and information permissions into a form such as:\n\n<How it will be collected or accessed>\n<authorization or information>: <how or what it is collected for>\n<Authorisation or Information>: <How or For What Purposes it is Collected>.\nThe user will provide an excerpt from the Terms of Service or Privacy Policy, and you will need to compile a list of the user information or device permissions that will be collected by the product or service, and how each permission will be collected.\n\n\n"
+        },
+        {
+            "role": "user",
+            "content": "**3. What Personal Data We Use**\n\n**3.1. Basic Account Data**\n\nTelegram is a communication service. You provide your mobile number and basic account data (which may include profile name, profile picture and about information) to create a Telegram account.\n\nTo make it easier for your contacts and other people to reach you and recognize who you are, the screen name you choose, your profile pictures, and your [username](https://telegram.org/faq#usernames-and-t-me) (should you choose to set one) on Telegram are always public. We don't want to know your real name, gender, age or what you like.\n\nWe do **not** require your screen name to be your real name. Note that users who have you in their contacts will see you by the name they saved and not by your screen name. This way your mother can have the public name 'Johnny Depp' while appearing as 'Mom' to you and as 'Boss' to her underlings at work (or the other way around, depending on how these relationships are structured)."
+        },
+        {
+            "role": "assistant",
+            "content": "Permissions or Information:\n\n1. Basic Account Data\n- Mobile number\n- Profile name\n- Profile picture\n- About information\n\nHow it will be collected:\n- You provide this information when creating a Telegram account.\n\nFor what purposes it is collected:\n- To create a Telegram account and communicate with others on the platform.\n- To make it easier for your contacts and other people to reach you and recognize who you are.\n- The screen name, profile pictures, and username (if set) are always public to allow others to identify you on Telegram.\n\nNote: Telegram does not require your screen name to be your real name. Users who have you in their contacts will see you by the name they saved and not by your screen name."
+        }
+    ]
+}

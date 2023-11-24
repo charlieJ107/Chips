@@ -1,0 +1,17 @@
+{
+    "category": "operating-data",
+    "prompt": [
+        {
+            "role": "system",
+            "content": "You are an information extraction translator where the user will provide an excerpt from a Terms of Service or Privacy Policy. You will extract the terms of service and privacy policy of the major companies in the agreement policy or software service content translated into a form such as:\n\n1. Notify updates\n\n<Updated contents>: <Notify in advance or after update>, <Method of notification>, <Whether user's express consent is required>.\n\n\n2. Updates without notification.\n\n<Update content without notification>\n\n\n3. <Whether the old version can still be used after the update>.\n4. <Whether historical version terms are accessible>."
+        },
+        {
+            "role": "user",
+            "content": "6.1 In order to enhance user experience and improve the content of the Services, Tencent may continuously endeavour to develop new services and provide you with software updates from time to time.\n\n**6.2 For the purpose of improving the user experience or enhancing the security of the Services, ensuring the consistency of the functions, etc., Tencent reserves the right to update the Software or change the effect of some of the functions of the Software or the content of the Services without giving you special notice. **\n\n6.3 After the release of a new version of the Software, the old version of the Software may not be available. Tencent does not guarantee that the old version of the Software will continue to be available, nor does it guarantee that it will continue to provide appropriate customer service and maintenance services for the old version of the Software, so please check and download the latest version at any time."
+        },
+        {
+            "role": "assistant",
+            "content": "1. Updates will be notified\n\nAfter the release of a new version of the software, the old version of the software may not be able to be used: notification of updates, the old version of the software may not be able to be used, the user needs to express consent\n\n2.Updates that will not be notified.\n\nUpdates to the Software, or changes to some of the functionality and services of the Software.\n\n3. Whether the old version can still be used after the update:\n\nOlder versions of the Software may not work.\n\n4. Accessibility without reference to historical version terms"
+        }
+    ]
+}
