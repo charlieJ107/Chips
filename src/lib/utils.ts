@@ -61,9 +61,9 @@ export async function writeAiStreamWithWriter({
 
 
 export const categories: TcCategory[] = [
-    "data-shareing",
-    "default-content",
-    "operating-data",
-    "permissions",
-    "update-inform"
+    "Data Transfer and Sharing",
+    "Users' Rights to Manage Data",
+    "Data Storage and Processing",
+    "Permissions and Collected Data",
+    "Changes"
 ];

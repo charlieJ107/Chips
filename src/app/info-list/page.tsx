@@ -91,7 +91,7 @@ export default function InfoList() {
                 </div>
                 <div className="w-full md:w-1/2 p-2">
                     <div className="bg-white rounded shadow p-5">
-                        <h3 className="text-xl font-bold">Users' Rights to Manage Data</h3>
+                        <h3 className="text-xl font-bold">Users&apos; Rights to Manage Data</h3>
                         <ul className="list-disc list-inside text-gray-600 pt-2">
                             <li>User Rights of accounts</li>
                             <ul className="list-disc list-inside text-gray-600 pt-2 px-5">
