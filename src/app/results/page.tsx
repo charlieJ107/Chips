@@ -1,9 +1,11 @@
 'use server';
 import { getAllRecords } from "@/lib/data/curd";
+import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
 export default async function Results() {
     const tcRecords = await getAllRecords();
+    revalidatePath('/results');
     return (
         <div className="container mx-auto p-4 h-full">
             <header className="bg-gray-100 p-4 flex justify-start items-center">
