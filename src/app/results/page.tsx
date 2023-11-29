@@ -38,7 +38,7 @@ export default async function Results() {
                                     )}
                                 </td>
                                 <td className="p-2">
-                                    <Link href={`/result/${record._id}`} className="text-blue-500 hover:underline">
+                                    <Link href={`/results/${record._id}`} className="text-blue-500 hover:underline">
                                         View Detail
                                     </Link>
                                 </td>

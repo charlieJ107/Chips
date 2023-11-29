@@ -24,7 +24,7 @@ export default async function Home() {
     }
     const created_id = await createRecord(tcRecord);
     if (created_id) {
-      redirect(`/result/${created_id}`);
+      redirect(`/results/${created_id}`);
     }
   }
 
