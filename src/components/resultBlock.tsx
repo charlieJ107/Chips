@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export function ResultBlock({ id, category }:
     {
         id: string,
-        category: TcCategory["name"]
+        category: TcCategory
     }
 ) {
     const [text, setText] = useState('');
@@ -19,7 +19,7 @@ export function ResultBlock({ id, category }:
         }
         if (!requested.current) {
             requested.current = true;
-            const eventSource = new EventSource(`/api/${category}?id=${id}`);
+            const eventSource = new EventSource(`/api/${category.code}?id=${id}`);
             eventSource.onopen = () => {
                 console.log('Connection to server opened.');
             }
@@ -34,7 +34,7 @@ export function ResultBlock({ id, category }:
     }, [category, id]);
     return (
         <div className="p-4 border border-gray-300 shadow rounded mb-4 w-full md:w-5/12">
-            <h3 className="font-bold mb-2">{category}</h3>
+            <h3 className="font-bold mb-2">{category.name}</h3>
             <p style={{ whiteSpace: "pre-line" }}>{text}</p>
         </div>
     )

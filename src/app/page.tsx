@@ -33,7 +33,7 @@ export default async function Home() {
       <header className="bg-gray-100 p-4 flex justify-start items-center">
         <h1 className="text-2xl bold px-5">Chips</h1>
         <nav className="px-5">
-          <a href="/result" className="text-blue-500 hover:text-blue-700 p-2">Results</a>
+          <a href="/results" className="text-blue-500 hover:text-blue-700 p-2">Results</a>
           <a href="/info-list" className="text-blue-500 hover:text-blue-700 p-2">Information List</a>
         </nav>
         <select defaultValue={'en-gb'} className="border border-gray-300 rounded px-4 py-2">
