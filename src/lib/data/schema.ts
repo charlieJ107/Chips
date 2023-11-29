@@ -1,3 +1,5 @@
+
+
 export interface TcRecord {
     _id: string;
     chat_id?: string;
@@ -15,4 +17,8 @@ export interface TcResult {
     content: string;
 }
 
-export type TcCategory = "Data Transfer and Sharing" | "Users' Rights to Manage Data" | "Data Storage and Processing" | "Permissions and Collected Data" | "Changes";
+export interface TcCategory {
+    code: "data-shareing" | "default-content" | "operating-data" | "permissions" | "update-inform",
+    name: "Data Transfer and Sharing" | "Users' Rights to Manage Data" | "Data Storage and Processing" | "Permissions and Collected Data" | "Changes";
+}
+

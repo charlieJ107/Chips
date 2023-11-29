@@ -6,7 +6,7 @@ import { Prompt } from "@/lib/prompts/schema";
 import { getAiResult } from "@/lib/ai";
 
 
-export async function stroageStreamToTcResult(id: string, category: string, stream: Stream<ChatCompletionChunk>): Promise<boolean> {
+export async function stroageStreamToTcResult(id: string, category: TcCategory, stream: Stream<ChatCompletionChunk>): Promise<boolean> {
     let text = "";
     let finish_reason: string | null = "";
     let chat_id = "";
@@ -35,7 +35,7 @@ export async function writeAiStreamWithWriter({
     tcRecord: TcRecord,
     writer: WritableStreamDefaultWriter
 }) {
-    const prompts: Prompt = await import(`@/lib/prompts/${tcRecord.language}/${category}.json`);
+    const prompts: Prompt = await import(`@/lib/prompts/${tcRecord.language}/${category.code}.json`);
     const aiResult = await getAiResult(tcRecord.contents[0], prompts.prompt);
     const encoder = new TextEncoder();
     let completeMessage = '';
@@ -61,9 +61,24 @@ export async function writeAiStreamWithWriter({
 
 
 export const categories: TcCategory[] = [
-    "Data Transfer and Sharing",
-    "Users' Rights to Manage Data",
-    "Data Storage and Processing",
-    "Permissions and Collected Data",
-    "Changes"
+    {
+        code: "data-shareing",
+        name: "Data Transfer and Sharing"
+    },
+    {
+        code: "default-content",
+        name: "Users' Rights to Manage Data"
+    },
+    {
+        code: "operating-data",
+        name: "Data Storage and Processing"
+    },
+    {
+        code: "permissions",
+        name: "Permissions and Collected Data"
+    },
+    {
+        code: "update-inform",
+        name: "Changes"
+    }
 ];

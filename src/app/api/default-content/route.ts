@@ -1,10 +1,14 @@
 import { getRecord } from "@/lib/data/curd";
+import { TcCategory } from "@/lib/data/schema";
 import { writeAiStreamWithWriter } from "@/lib/utils";
 import { NextResponse } from "next/server";
 import "server-only";
 
 export async function GET(request: Request) {
-    const category = "Users' Rights to Manage Data";
+    const category = {
+        code: "default-content",
+        name: "Users' Rights to Manage Data"
+    } as TcCategory;
     const url = new URL(request.url);
     const id = url.searchParams.get('id');
     if (!id || id.length < 1) {
@@ -20,7 +24,7 @@ export async function GET(request: Request) {
 
     let hasResult = false;
     for (const result of tcRecord.tcRes) {
-        if (result.category === category) {
+        if (result.category.code === category.code) {
             hasResult = true;
             const replacedMessage = result.content.replace(/\n/g, '==Never gonna give you up==');
             const encoder = new TextEncoder();

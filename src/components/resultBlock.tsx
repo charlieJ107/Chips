@@ -1,12 +1,11 @@
 'use client';
-
 import { TcCategory } from "@/lib/data/schema";
 import { useEffect, useRef, useState } from "react";
 
 export function ResultBlock({ id, category }:
     {
         id: string,
-        category: TcCategory
+        category: TcCategory["name"]
     }
 ) {
     const [text, setText] = useState('');

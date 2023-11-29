@@ -26,7 +26,7 @@ export default async function Result({ params }: { params: { id: string } }) {
             <hr className="py-4 border-t" />
             <main className="flex flex-wrap -m-2 pt-5 px-3 mx-5">
                 {categories.map((category) => (
-                    <ResultBlock key={category} id={params.id} category={category} />
+                    <ResultBlock key={category.code} id={params.id} category={category.name} />
                 ))}
 
             </main>
