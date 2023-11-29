@@ -46,7 +46,7 @@ export default async function Home() {
           <label className="block mb-4" htmlFor="name">Name</label>
           <input className="border border-gray-300 rounded px-4 py-2 w-full" type="text" name="name" placeholder="Name" />
           <label className="block mb-4 mt-8" htmlFor="ts">Terms and Conditions</label>
-          <textarea className="w-full h-64 border border-gray-300 rounded p-4" name="ts" placeholder='Paste your T&S here' ></textarea>
+          <textarea className="w-full h-64 border border-gray-300 rounded p-4" name="ts" placeholder='Paste your Terms and Conditions here' ></textarea>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8" type="submit">Submit</button>
         </form>
       </main>
