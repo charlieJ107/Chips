@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import "server-only";
 
 export async function GET(request: Request) {
-    const category = 'data-shareing';
+    const category = 'Data Transfer and Sharing';
     const url = new URL(request.url);
     const id = url.searchParams.get('id');
     if (!id || id.length < 1) {

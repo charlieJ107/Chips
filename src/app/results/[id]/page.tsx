@@ -18,7 +18,8 @@ export default async function Result({ params }: { params: { id: string } }) {
                 <h1 className="text-2xl bold">Chips</h1>
                 <nav className="ps-5">
                     <a href="/" className="text-blue-500 hover:text-blue-700 p-2">Home</a>
-                    <a href="/result" className="text-blue-500 hover:text-blue-700 p-2">Results</a>
+                    <a href="/results" className="text-blue-500 hover:text-blue-700 p-2">Results</a>
+                    <a href="/info-list" className="text-blue-500 hover:text-blue-700 p-2">Information List</a>
                 </nav>
             </header>
             <h2 className="text-2xl font-bold px-4 py-5">{tcRecord.name || "Unkown Terms and Conditionss"}</h2>

@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import "server-only";
 
 export async function GET(request: Request) {
-    const category = 'permissions';
+    const category = 'Permissions and Collected Data';
     const url = new URL(request.url);
     const id = url.searchParams.get('id');
     if (!id || id.length < 1) {
